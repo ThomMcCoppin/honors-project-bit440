@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button href="home" fill="clear"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+    <ion-title> {{ selectedAnime.title.romaji }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content>
+
+  <ion-list>
+    <ion-list-header> <ion-label *ngIf='selectedAnime.title.romaji != selectedAnime.title.english'> {{ selectedAnime.title.english }} </ion-label></ion-list-header>
+    <ion-item>{{ selectedAnime.genres }}</ion-item>
+    <ion-item>{{ selectedAnime.seasonYear }}</ion-item>
+    <ion-item>{{ selectedAnime.episodes }}</ion-item>
+  </ion-list>
+
+</ion-content>
